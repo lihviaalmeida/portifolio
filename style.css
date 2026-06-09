@@ -1,0 +1,62 @@
+
+  /* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Corrigido aqui */
+}
+
+body {
+    background-color: #333333; /* Fundo cinza escuro */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
+}
+
+/* Estilização das Seções */
+.projeto-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Títulos */
+.titulo-h1, .titulo-h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Textos Descritivos (Tag P) */
+.descricao {
+    font-size: 1.1rem;
+    color: #dddddd;
+    text-align: left;
+}
+
+/* Containers de Imagem (Mockups) */
+.mockup-container {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #222; /* Fundo temporário caso não ache a imagem */
+    border: 1px solid #555;
+    min-height: 200px; /* Garante que o bloco apareça mesmo sem foto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
