@@ -1,62 +1,279 @@
-
-  /* Configurações Globais e Reset */
-* {
+/* ==========================================================================
+   1. RESET DE MARGENS E CONFIGURAÇÕES PADRÃO (Comum para todas as páginas)
+   ========================================================================== */
+   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Corrigido aqui */
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #333333; /* Fundo cinza escuro */
-    font-family: Arial, sans-serif;
+    background-color: #3e3e3e; /* Cor de fundo cinza escuro idêntica ao print */
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 40px 20px;
 }
 
+/* ==========================================================================
+   2. ESTILOS DA PÁGINA PRINCIPAL (Home / Perfil com o Arco)
+   ========================================================================== */
+
+/* Container principal que limita a largura do layout da Home */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
-    gap: 50px; 
+    align-items: center;
 }
 
-/* Estilização das Seções */
-.projeto-section {
+/* Título Principal "Ana Lívia" */
+.main-title {
+    font-size: 4.5rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Alinhamento dos três blocos principais lado a lado (Textos e Imagem Única) */
+.content-section {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-/* Títulos */
-.titulo-h1, .titulo-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* Textos Descritivos (Tag P) */
-.descricao {
+/* Blocos de texto laterais da Home */
+.text-block {
+    width: 22%; 
     font-size: 1.1rem;
-    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Espaçamento entre os parágrafos com o ponto inicial */
+.text-block p {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Adiciona o ponto (.) antes de cada parágrafo */
+.text-block p::before {
+    content: ".";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-weight: bold;
+}
+
+/* Remove o ponto apenas do texto da idade */
+.text-block p.age::before {
+    content: "";
+}
+
+.left-text, .right-text {
     text-align: left;
 }
 
-/* Containers de Imagem (Mockups) */
-.mockup-container {
-    width: 100%;
-    margin-top: 10px;
-    background-color: #222; /* Fundo temporário caso não ache a imagem */
-    border: 1px solid #555;
-    min-height: 200px; /* Garante que o bloco apareça mesmo sem foto */
+/* Container da imagem central única (Arco + Sua foto juntos) */
+.image-wrapper {
+    width: 50%; /* Ocupa metade da largura da tela, deixando bem grande */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.mockup-img {
+/* A imagem montada do centro */
+.center-img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Área inferior do botão de Projetos */
+.projects-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #4a90e2; /* Linha azul de divisão */
+    padding-top: 30px;
+}
+
+/* Botão cinza escrito Projetos */
+.projects-box {
+    background-color: #8e8e8e; 
+    color: #ffffff;
+    font-size: 3.5rem;
+    padding: 10px 80px;
+    width: 70%;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    text-decoration: none; /* Remove sublinhado se usar tag <a> */
+    display: block;
+}
+
+
+/* ==========================================================================
+   3. ESTILOS DA PÁGINA DE PROJETOS (Player de Música e Pokémon)
+   ========================================================================== */
+
+/* Container central que alinha a página de projetos */
+.portfolio-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Distância entre os projetos */
+}
+
+/* Cabeçalho da página secundária */
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Caixa cinza clara escrita "Projetos" no topo */
+.page-title {
+    background-color: #8e8e8e;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: normal;
+    padding: 15px 0;
+    width: 75%;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.15);
+}
+
+/* Estrutura de cada bloco de projeto */
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Títulos dos projetos (H2) */
+.project-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Textos descritivos dos projetos (P) */
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Caixa e configuração dos prints das telas dos projetos */
+.project-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ==========================================================================
+   4. RESPONSIVIDADE (Ajustes automáticos para Celular)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Ajustes da Home no celular */
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .text-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-block p::before {
+        display: none; /* Tira os pontinhos no celular para não quebrar o texto */
+    }
+
+    .image-wrapper {
+        width: 80%;
+        order: -1; /* Joga a sua foto com o arco para o topo no celular */
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .projects-box {
+        font-size: 2.5rem;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    /* Ajustes da página de Projetos no celular */
+    .page-title {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+}
+/* RESET E CONFIGURAÇÕES GERAIS DE TELA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #2b313e; /* Cor escura do fundo da página */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Reduz ainda mais o tamanho da imagem e mantém a centralização */
+.rpg-img-adjust {
+    max-width: 40%; /* Diminuído para 40%. Se quiser menor, tente 30% */
+    width: 100%;    
+    height: auto;
+    border-radius: 6px; 
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Garante que no celular a imagem não fique minúscula */
+@media (max-width: 768px) {
+    .rpg-img-adjust {
+        max-width: 80%; /* No celular, ela ocupa 80% da tela */
+    }
 }
