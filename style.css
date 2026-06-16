@@ -67,7 +67,7 @@ body {
 }
 
 .text-block {
-    width: 22%; 
+    width: 35%;
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -91,14 +91,19 @@ body {
     content: "";
 }
 
+
 .image-wrapper {
     width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .center-img {
     width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    display: block;
 }
-
 /* Botão de Projetos */
 .projects-section {
     width: 100%;
@@ -166,6 +171,29 @@ body {
 .rpg-img-adjust {
     max-width: 40%;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto 0 0; /* Alinha totalmente à esquerda */
     border-radius: 6px; 
 }
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.center-img {
+    width: 100%;
+    display: block;
+    margin-left: 0; /* Garante que não haja margem na esquerda */
+}
+
+.lala {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
