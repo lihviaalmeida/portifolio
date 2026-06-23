@@ -1,99 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifoli</title>
+    <title>Portfólio | Ana Lívia</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contatos.html">Contatos</a>
+    </nav>
 
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="contatos.html"> Contatos</a>
-</nav>
-
-
+    <!-- Conteúdo Principal -->
     <main class="container">
         
+        <!-- Seção Sobre Mim -->
         <h1 class="main-title">Ana Lívia</h1>
-
         
         <section class="content-section">
-
             <!-- Texto à esquerda -->
             <div class="text-block">
                 <p>Quero ser zootecnista</p>
-                <p>Namoro com um menino chamado João Vitor</p>
                 <p>Tenho paixão pelo estilo de vida country e pelo mundo dos rodeios</p>
             </div>
-        
             <!-- Imagem à direita -->
             <div class="image-wrapper">
                 <img src="./imag/eu.2.jpeg" class="center-img" alt="Minha Foto">
             </div>
-        
         </section>
 
-        
+        <!-- Cabeçalho da Seção de Projetos -->
         <header class="main-header">
-            <h1 class="page-title">Projetos</h1>
+            <h2 class="page-title">Projetos</h2>
         </header>
 
-        
+        <!-- Projeto 1: Player de Música -->
         <section class="project-section">
             <h2 class="project-title">Meu Player de Música Pessoal!</h2>
             <p class="project-description">
-                Criei um player de áudio personalizado usando HTML, CSS e JavaScript! A ideia 
-                foi montar uma interface bem limpa e direto ao ponto para ouvir minhas 
-                faixas favoritas. Foi um projeto super divertido de fazer e excelente para 
-                colocar em prática a manipulação do DOM e deixar o visual responsivo.
+                Criei um player de áudio personalizado usando HTML, CSS e JavaScript! A ideia foi montar uma interface bem limpa e direto ao ponto para ouvir minhas faixas favoritas. Foi um projeto super divertido de fazer e excelente para colocar em prática a manipulação do DOM e deixar o visual responsivo.
             </p>
             <div class="image-wrapper">
-                
                 <img src="./imag/Captura de tela 2026-06-09 141406.png" alt="Player de Música" class="lala">
             </div>
         </section>
 
-        
+        <!-- Projeto 2: Pokémon -->
         <section class="project-section">
             <h2 class="project-title">Meu Projeto Pokémon</h2>
             <p class="project-description">
-                Montei uma página em HTML para listar alguns Pokémon de um jeito bem maneiro! 
-                O foco foi mostrar os bichos na tela junto com os status de cada um: Força, 
-                Velocidade, Peso e Habilidade. Ficou um visual bem direto ao ponto e foi massa 
-                demais de estruturar!
+                Montei uma página em HTML para listar alguns Pokémon de um jeito bem maneiro! O foco foi mostrar os bichos na tela junto com os status de cada um: Força, Velocidade, Peso e Habilidade. Ficou um visual bem direto ao ponto e foi massa demais de estruturar!
             </p>
             <div class="image-wrapper">
-                
                 <img src="./imag/Captura de tela 2026-06-09 143107.png" alt="Projeto Pokémon" class="lala">
             </div>
         </section>
 
-    </main>
-    
-<section class="project-section">
-    <h2 class="project-title rpg-special-title">Meu Próprio Mini RPG em HTML!</h2>
-    
-    <p class="project-description">
-        criei um mini jogo de RPG direto no navegador! Montei um painel de batalha onde 
-        dá para controlar o status do personagem ("Salles 🌵"): ela ganha nível, toma dano 
-        com barra de vida interativa e usa poção para se curar. O código ficou bem dinâmico 
-        e foi massa demais ver a lógica de batalha funcionando na tela!
-    </p>
-    
+        <!-- Projeto 3: Mini RPG -->
+        <section class="project-section">
+            <h2 class="project-title rpg-special-title">Meu Próprio Mini RPG em HTML!</h2>
+            <p class="project-description">
+                Criei um mini jogo de RPG direto no navegador! Montei um painel de batalha onde dá para controlar o status do personagem ("Salles 🌵"): ela ganha nível, toma dano com barra de vida interativa e usa poção para se curar. O código ficou bem dinâmico e foi massa demais ver a lógica de batalha funcionando na tela!
+            </p>
+            <div class="image-wrapper">
+                <img src="imag/jogo.png" alt="jogo rpg" class="lala">
+            </div>
+        </section>
 
-<div class="image-wrapper">
-                
-    <img src="imag/jogo.png" alt="jogo rpg" class="lala">
-</div>
-</section>
+    </main>
+
+<footer class="footer">
+    <div class="contact-form">
+      <h2>Contatos</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  
+    <p class="footer-text">Ana Livia  2026</p>
+  </footer>
+  
+
 </body>
 </html>
-
-

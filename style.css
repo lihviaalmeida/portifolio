@@ -1,199 +1,278 @@
-/* ==================== 1. CONFIGURAÇÕES GERAIS ==================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: #3e3e3e; /* Cor de fundo escura */
+  }
+  
+  body {
+    background-color: #3e3e3e;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     display: flex;
-    flex-direction: column; /* Alinha o menu em cima e o conteúdo embaixo */
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 120px 40px 40px 40px; /* Aumentado o topo (120px) para o menu não cobrir o texto */
-}
-
-/* ==================== MENU DO TOPO ==================== */
-.navbar {
-    position: fixed; /* Fixa o menu no topo da tela ao rolar a página */
+    padding: 120px 20px 0 20px;
+  }
+  
+ 
+  .navbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #2b2b2b; /* Fundo um pouco mais escuro que o body */
+    background-color: #2b2b2b;
     display: flex;
-    justify-content: center; /* Centraliza os links */
-    gap: 40px; /* Espaço entre os links */
+    justify-content: center;
+    gap: 40px;
     padding: 20px 0;
-    z-index: 1000; /* Garante que o menu fique sempre na frente de tudo */
-}
-
-.navbar a {
+    z-index: 1000;
+  }
+  
+  .navbar a {
     color: #ffffff;
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase; /* Deixa o texto em MAIÚSCULO */
-}
-
-/* Efeito visual quando passa o mouse por cima do link */
-.navbar a:hover {
-    color: #4a90e2; /* Muda para a cor azul do seu projeto */
-}
-
-/* ==================== 2. PÁGINA PRINCIPAL (HOME) ==================== */
-.container {
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #4a90e2;
+  }
+  
+  
+  .container {
     width: 100%;
     max-width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main-title {
+    flex: 1;
+  }
+  
+  .main-title {
+    font-family: 'Black Ops One', cursive;
     font-size: 4.5rem;
     margin-bottom: 30px;
-}
-
-.content-section {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.text-block {
-    width: 35%;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Adiciona o ponto antes dos parágrafos, exceto na idade */
-.text-block p {
-    margin-bottom: 25px;
-    position: relative;
-    padding-left: 15px;
-}
-
-.text-block p::before {
-    content: ".";
-    position: absolute;
-    left: 0;
-    top: -2px;
-    font-weight: bold;
-}
-
-.text-block p.age::before {
-    content: "";
-}
-
-
-.image-wrapper {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.center-img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 15px;
-    display: block;
-}
-/* Botão de Projetos */
-.projects-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-top: 4px solid #4a90e2; /* Linha azul */
-    padding-top: 30px;
-}
-
-.projects-box {
-    background-color: #8e8e8e; 
-    color: #ffffff;
-    font-size: 3.5rem;
-    padding: 10px 80px;
-    width: 70%;
     text-align: center;
-    text-decoration: none;
-}
-
-/* ==================== 3. PÁGINA DE PROJETOS ==================== */
-.portfolio-container {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.main-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.page-title {
-    background-color: #8e8e8e;
-    font-size: 4rem;
-    padding: 15px 0;
-    width: 75%;
-    text-align: center;
-}
-
-.project-section {
-    width: 100%;
-}
-
-.project-title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.project-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #7f8185;
-    margin-bottom: 25px;
-}
-
-.project-image {
-    width: 100%;
-}
-
-/* Ajuste específico para a imagem menor do RPG */
-.rpg-img-adjust {
-    max-width: 40%;
-    display: block;
-    margin: 0 auto 0 0; /* Alinha totalmente à esquerda */
-    border-radius: 6px; 
-}
-.content-section {
+  }
+  
+  .content-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     width: 100%;
     margin-bottom: 40px;
-}
-
-.center-img {
+  }
+  
+  .text-block {
+    width: 45%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .text-block p {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .text-block p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #4a90e2;
+  }
+  
+  .image-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .center-img {
     width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
     display: block;
-    margin-left: 0; /* Garante que não haja margem na esquerda */
-}
-
-.lala {
-    width: 500px;
-    height: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .page-title {
+    font-family: 'Black Ops One', cursive;
+    background-color: #8e8e8e;
+    font-size: 3rem;
+    padding: 15px 0;
+    width: 75%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .project-section {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 60px;
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .project-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4a90e2;
+  }
+  
+  .rpg-special-title {
+    color: #e63946;
+  }
+  
+  .project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d1d1d1;
+    margin-bottom: 25px;
+  }
+  
+  .lala {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 350px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
-}
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .lala:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  .footer {
+    width: 100%;
+    background-color: #2b2b2b;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #4a90e2;
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .contact-form form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e3e3e;
+    color: #ffffff;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #cccccc;
+  }
+  
+  .contact-form button {
+    background-color: #4a90e2;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #357abd;
+  }
+  
+  .social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .social-icons a {
+    font-size: 2rem;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #4a90e2;
+    transform: translateY(-5px);
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color: #7f8185;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    body {
+      padding-top: 100px;
+    }
+  
+    .content-section {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+  
+    .text-block, .image-wrapper {
+      width: 100%;
+    }
+  
+    .image-wrapper {
+      justify-content: center;
+    }
+  
+    .main-title {
+      font-size: 3rem;
+    }
+  
+    .page-title {
+      font-size: 2rem;
+      width: 100%;
+    }
+  
+    .contact-form form {
+      width: 100%;
+    }
+  }
 
+  
